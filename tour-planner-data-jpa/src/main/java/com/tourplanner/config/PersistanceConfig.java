@@ -18,6 +18,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 @PropertySource("classpath:db.properties")
 @EnableJpaRepositories(basePackages = { "com.tourplanner.repositories" })
 public class PersistanceConfig {
+	
+	//db conneection
 
 	@Bean
 	public DataSource dataSource(@Value("${db.driverClassname}") String driverClassname, @Value("${db.url}") String url,
